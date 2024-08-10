@@ -144,6 +144,18 @@ header nav ul li:hover {
     transition: max-height 0.5s ease-in;
 }
 
+#python {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+#python.visible {
+    max-height: 500px;
+    /* Adjust the height according to your content */
+    transition: max-height 0.5s ease-in;
+}
+
 main {
     overflow-x: hidden;
 }

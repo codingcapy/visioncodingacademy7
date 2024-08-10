@@ -6,7 +6,7 @@ version: 1.0
 description: Courses page for Vision Coding Academy
  */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import $ from 'jquery';
 import ScrollReveal from 'scrollreveal'
 import { NavLink } from 'react-router-dom';
@@ -89,6 +89,9 @@ export default function CoursesPage() {
         });
     });
 
+    const [showPython, setShowPython] = useState(false)
+    const [showPython2, setShowPython2] = useState(false)
+
     return (
         <main className="flex-1">
             <div className="bg-black text-white flex flex-col md:w-[1000px] lg:w-[1440px] mx-auto">
@@ -113,37 +116,37 @@ export default function CoursesPage() {
                     <div>
                         <h1 className="pb-10 text-4xl md:text-6xl text-yellow-200 text-center">K-12 Courses</h1>
                         <section className="md:w-[500px] mx-auto">
-                            <div className="timeline-content js--fadeInRight mx-5 md:px-5 md:py-2 rounded-4xl">
-                                <NavLink to="/courses/python">
-                                    <div
-                                        className="h-[450px] px-5 md:pr-20 py-5 pb-20 bg-black-700 rounded-3xl border-2 border-yellow-200 hover:bg-neutral-600 ease duration-300">
-                                        <img src={icon7} alt="course1" className="w-[100px] mx-auto mx-center" />
-                                        <div className="text-2xl font-bold py-2 text-yellow-200">PYTHON BEGINNER</div>
-                                        <div className="text-2xl font-bold py-2">Programming Language</div>
-                                        <div className="text-xl font-bold py-2">Beginner-friendly and powerful programming
-                                            language used in data science and AI!</div>
-                                    </div>
+                            <div className="timeline-content js--fadeInRight mx-5 md:px-5 mb-5 md:py-2 rounded-4xl">
+                                <div
+                                    className="px-5 md:pr-20 py-5 pb-10 bg-black-700 rounded-3xl border-2 border-yellow-200 hover:bg-neutral-600 ease duration-300" onClick={() => setShowPython(!showPython)} >
+                                    <img src={icon7} alt="course1" className="w-[100px] mx-auto mx-center" />
+                                    <div className="text-2xl font-bold py-2 text-yellow-200">PYTHON BEGINNER</div>
+                                    <div className="text-2xl font-bold py-2">Programming Language</div>
+                                    {showPython && <div id='python' className={`${showPython ? 'visible' : ''} text-xl font-bold py-2`}>Beginner-friendly and powerful programming
+                                        language used in data science and AI!</div>}
+                                </div>
+                                {showPython && <NavLink to="/courses/python">
                                     <div
                                         className="relative bottom-10 left-2 text-center md:left-[0px] w-[200px] mx-auto px-3 py-3 bg-black border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">
                                         Learn More
                                     </div>
-                                </NavLink>
+                                </NavLink>}
                             </div>
                             <div className="timeline-content js--fadeInRight mx-5 md:px-5 md:py-2 rounded-4xl">
-                                <NavLink to="/courses/python2">
-                                    <div
-                                        className="h-[450px] px-5 md:pr-20 py-5 pb-20 bg-black-700 rounded-3xl border-2 border-yellow-200 hover:bg-neutral-600 ease duration-300">
-                                        <img src={icon7} alt="course1" className="w-[100px] mx-auto mx-center" />
-                                        <div className="text-2xl font-bold py-2 text-yellow-200">PYTHON INTERMEDIATE</div>
-                                        <div className="text-2xl font-bold py-2">Programming Language</div>
-                                        <div className="text-xl font-bold py-2">Challenge your fundamentals of Python skills by
-                                            building exciting projects!</div>
-                                    </div>
+                                <div
+                                    className="px-5 md:pr-20 py-5 pb-20 bg-black-700 rounded-3xl border-2 border-yellow-200 hover:bg-neutral-600 ease duration-300" onClick={() => setShowPython2(!showPython2)}>
+                                    <img src={icon7} alt="course1" className="w-[100px] mx-auto mx-center" />
+                                    <div className="text-2xl font-bold py-2 text-yellow-200">PYTHON INTERMEDIATE</div>
+                                    <div className="text-2xl font-bold py-2">Programming Language</div>
+                                    {showPython2 && <div className="text-xl font-bold py-2">Challenge your fundamentals of Python skills by
+                                        building exciting projects!</div>}
+                                </div>
+                                {showPython2 && <NavLink to="/courses/python2">
                                     <div
                                         className="relative bottom-10 left-2 text-center md:left-[0px] w-[200px] mx-auto px-3 py-3 bg-black border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">
                                         Learn More
                                     </div>
-                                </NavLink>
+                                </NavLink>}
                             </div>
                             <div className="timeline-content js--fadeInRight mx-5 md:px-5 md:py-2 rounded-4xl">
                                 <NavLink to="/courses/webdev">
