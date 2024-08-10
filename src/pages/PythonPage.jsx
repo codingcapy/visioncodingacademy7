@@ -1,6 +1,7 @@
 
 import { useEffect } from "react";
 import icon7 from "/icon7python2.png"
+import icon17 from "/icon17algorithm.png"
 
 export default function PythonPage() {
 
@@ -14,7 +15,7 @@ export default function PythonPage() {
                 <video id="background-video" autoPlay loop muted poster="https://static.spartacodingclub.kr/hanghae99/hhplus_fe_hero_mobile.mp4?ver=2"
                     className="h-[500px]">
                     <source src="https://static.spartacodingclub.kr/hanghae99/hhplus_fe_hero_mobile.mp4?ver=2"
-                        type="video/mp4"/>
+                        type="video/mp4" />
                 </video>
                 <h3
                     className="text-5xl md:text-6xl py-10 pb-2 text-center absolute top-[30%] left-[10%] md:left-[37%] z-10">
@@ -40,7 +41,7 @@ export default function PythonPage() {
                     <p className="text-sm md:text-lg">Comments and documentation</p>
                     <h4 className="text-lg font-bold py-2 md:py-4">Project:</h4>
                     <p className="text-sm md:text-lg">Build a calculator level 1</p>
-                    <img src={icon7} alt="logo" className="w-[75px] pt-5"/>
+                    <img src={icon7} alt="logo" className="w-[75px] pt-5" />
                 </div>
                 <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px] my-10">
                     <h3 className="text-xl text-red-400 font-bold md:pb-5">Week 2: Comparisons, Conditional, Data
@@ -55,181 +56,181 @@ export default function PythonPage() {
                     <p className="text-sm md:text-lg">Comments and documentation</p>
                     <h4 className="text-lg font-bold py-2 md:py-4">Project:</h4>
                     <p className="text-sm md:text-lg">Build a calculator level 2</p>
-                    <img src={icon7} alt="logo" className="w-[75px] pt-5"/>
+                    <img src={icon7} alt="logo" className="w-[75px] pt-5" />
                 </div>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 3: Loops continued</h3>
-                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px] md:my-2"/>
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px]">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 3: Loops continued</h3>
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">For Loops</li>
+                            <li className="text-lg">While Loops</li>
+                            <li className="text-lg">Nested For Loops</li>
+                            <li className="text-lg">Nested While Loops</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Number Guessing Game</li>
+                        </ul>
+                    </ul>
+                    <img src={icon7} alt="logo" className="w-[75px] md:my-2 pt-5" />
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">For Loops</li>
-                        <li className="text-lg">While Loops</li>
-                        <li className="text-lg">Nested For Loops</li>
-                        <li className="text-lg">Nested While Loops</li>
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px] my-10">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 4: Functions</h3>
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">What is a Function</li>
+                            <li className="text-lg">Return Statement</li>
+                            <li className="text-lg">Parameters</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Build a calculator level 3</li>
+                        </ul>
                     </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Number Guessing Game</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 4: Functions</h3>
-                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]"/>
+                    <img src={icon7} alt="logo" className="w-[75px]" />
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">What is a Function</li>
-                        <li className="text-lg">Return Statement</li>
-                        <li className="text-lg">Parameters</li>
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px]">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 5: Libraries</h3>
+                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">What is a Library</li>
+                            <li className="text-lg">Pip</li>
+                            <li className="text-lg">Numpy, Pandas, Matplotlib</li>
+                            <li className="text-lg">Turtle Library</li>
+                            <li className="text-lg">Random Library</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Number Guessing Game II</li>
+                        </ul>
                     </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Build a calculator level 3</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 5: Libraries</h3>
-                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]"/>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">What is a Library</li>
-                        <li className="text-lg">Pip</li>
-                        <li className="text-lg">Numpy, Pandas, Matplotlib</li>
-                        <li className="text-lg">Turtle Library</li>
-                        <li className="text-lg">Random Library</li>
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px] my-10">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 6: Data Structures</h3>
+                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Tuples</li>
+                            <li className="text-lg">Sets</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Movie Mania I</li>
+                        </ul>
                     </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Number Guessing Game II</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 6: Data Structures</h3>
-                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]"/>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Tuples</li>
-                        <li className="text-lg">Sets</li>
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px]">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 7: Dictionaries and String</h3>
+                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Dictionaries</li>
+                            <li className="text-lg">Strings</li>
+                            <li className="text-lg">String Methods</li>
+                            <li className="text-lg">String Slicing</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Social Media Project</li>
+                        </ul>
                     </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Movie Mania I</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 7: Dictionaries and String</h3>
-                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]"/>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Dictionaries</li>
-                        <li className="text-lg">Strings</li>
-                        <li className="text-lg">String Methods</li>
-                        <li className="text-lg">String Slicing</li>
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px] my-10">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 8: Type Conversion and File I/O</h3>
+                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Implicit Type Conversion</li>
+                            <li className="text-lg">Explicit Type Conversion</li>
+                            <li className="text-lg">File Input (read)</li>
+                            <li className="text-lg">File Output (write)</li>
+                            <li className="text-lg">Advanced File I/O</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Social Media Project part 2</li>
+                        </ul>
                     </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Social Media Project</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 8: Type Conversion and File I/O</h3>
-                    <img src={icon7} alt="logo" className="mx-auto md:float-right w-[75px]"/>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Implicit Type Conversion</li>
-                        <li className="text-lg">Explicit Type Conversion</li>
-                        <li className="text-lg">File Input (read)</li>
-                        <li className="text-lg">File Output (write)</li>
-                        <li className="text-lg">Advanced File I/O</li>
-                    </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Social Media Project part 2</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 9: Algorithms
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px]">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 9: Algorithms
                     </h3>
-                    <img src="../images/icon17algorithm.png" alt="logo" className="mx-auto md:float-right w-[75px]"/>
+                    <img src={icon17} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">What are Algorithms</li>
+                            <li className="text-lg">Search Algorithms​</li>
+                            <li className="text-lg">Linear Search​</li>
+                            <li className="text-lg">Binary Search​</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Social Media Project part 3</li>
+                        </ul>
+                    </ul>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">What are Algorithms</li>
-                        <li className="text-lg">Search Algorithms​</li>
-                        <li className="text-lg">Linear Search​</li>
-                        <li className="text-lg">Binary Search​</li>
-                    </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Social Media Project part 3</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 10: Error Handling
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px] my-10">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 10: Error Handling
                     </h3>
-                    <img src="../images/icon17algorithm.png" alt="logo" className="mx-auto md:float-right w-[75px]"/>
+                    <img src={icon17} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Errors</li>
+                            <li className="text-lg">Try and Except</li>
+                            <li className="text-lg">Multiple Exceptions</li>
+                            <li className="text-lg">Else and Finally</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Social Media Project part 4</li>
+                        </ul>
+                    </ul>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Errors</li>
-                        <li className="text-lg">Try and Except</li>
-                        <li className="text-lg">Multiple Exceptions</li>
-                        <li className="text-lg">Else and Finally</li>
-                    </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Social Media Project part 4</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 11: Sorting Algorithms
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px]">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 11: Sorting Algorithms
                     </h3>
-                    <img src="../images/icon17algorithm.png" alt="logo" className="mx-auto md:float-right w-[75px]"/>
+                    <img src={icon17} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Sorting Algorithms</li>
+                            <li className="text-lg">Bubble Sort</li>
+                            <li className="text-lg">Selection Sort</li>
+                            <li className="text-lg">Quick Sort</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Social Media Project part 4</li>
+                        </ul>
+                    </ul>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Sorting Algorithms</li>
-                        <li className="text-lg">Bubble Sort</li>
-                        <li className="text-lg">Selection Sort</li>
-                        <li className="text-lg">Quick Sort</li>
-                    </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Social Media Project part 4</li>
-                    </ul>
-                </ul>
-                <div className="py-10 ">
-                    <h3 className="text-xl text-yellow-400 md:border-l-2 pl-5">Week 12: Final Project
+                <div className="bg-white text-black px-10 py-10 rounded-xl shadow-2xl shadow-white mx-5 md:mx-auto md:w-[600px] my-10">
+                    <h3 className="text-xl text-red-400 md:border-l-2 pl-5">Week 12: Final Project
                     </h3>
-                    <img src="../images/icon17algorithm.png" alt="logo" className="mx-auto md:float-right w-[75px]"/>
+                    <img src={icon17} alt="logo" className="mx-auto md:float-right w-[75px]" />
+                    <ul className="list-disc list-inside pl-2 md:pl-5">
+                        <li className="text-lg">Topics:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">GitHub</li>
+                            <li className="text-lg">Final Project 1</li>
+                            <li className="text-lg">Final Project 2</li>
+                            <li className="text-lg">Recap</li>
+                        </ul>
+                        <li className="text-lg">Project:</li>
+                        <ul className="list-disc list-inside pl-7 pb-5">
+                            <li className="text-lg">Text-Based Adventure Game</li>
+                        </ul>
+                    </ul>
                 </div>
-                <ul className="list-disc list-inside pl-2 md:pl-5">
-                    <li className="text-lg">Topics:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">GitHub</li>
-                        <li className="text-lg">Final Project 1</li>
-                        <li className="text-lg">Final Project 2</li>
-                        <li className="text-lg">Recap</li>
-                    </ul>
-                    <li className="text-lg">Project:</li>
-                    <ul className="list-disc list-inside pl-7 pb-5">
-                        <li className="text-lg">Text-Based Adventure Game</li>
-                    </ul>
-                </ul>
             </section>
             <div className="fixed bottom-2 right-2 md:bottom-16 md:right-16 bg-transparent">
                 <div className="py-2 bg-transparent z-10">
