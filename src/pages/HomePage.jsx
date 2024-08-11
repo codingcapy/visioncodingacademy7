@@ -17,7 +17,7 @@ import techIcon2 from "/icon2.svg"
 import techIcon3 from "/icon3.svg"
 import techIcon4 from "/icon4.svg"
 import techIcon5 from "/icon5.svg"
-import bgVideo from '/bg2-6.mp4';
+import bgVideo from '/bg2-7.mp4';
 import logoAlpha from "/logo_alpha.png"
 import homeBanner from "/home-banner.jpg"
 import visionCodingIcon from "/yellow1.png"
