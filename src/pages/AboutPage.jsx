@@ -198,14 +198,14 @@ export default function AboutPage() {
                         <h1 className="md:pl-2 text-3xl text-center">Jay</h1>
                         <div className="md:pl-2 text-lg md:text-xl py-5">Director and DevOps Engineer</div>
                     </div>
-                    <p class="timeline-content js--fadeInLeft px-2 text-lg md:text-2xl text-center md:text-left">
+                    <p className="timeline-content js--fadeInLeft px-2 text-lg md:text-2xl text-center md:text-left">
                         At Vision Coding Academy, I, Jay, blend
-                        my <span class="text-yellow-200">tech know-how</span> with <span
-                            class="text-yellow-200">educational
-                            insights</span> to create a <span class="text-yellow-200">dynamic learning environment</span>. My journey in tech and
+                        my <span className="text-yellow-200">tech know-how</span> with <span
+                            className="text-yellow-200">educational
+                            insights</span> to create a <span className="text-yellow-200">dynamic learning environment</span>. My journey in tech and
                         teaching isn't just about imparting
                         knowledge;
-                        it's about <span class="text-yellow-200">igniting a passion for innovation and
+                        it's about <span className="text-yellow-200">igniting a passion for innovation and
                             problem-solving</span> in our students.
                     </p>
                 </section>
@@ -345,11 +345,22 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </section>
-                <section className="mx-2 py-10 border-t-2 border-b-2">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.918591896756!2d-122.80519882320316!3d49.27793977108967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548678cc852829e7%3A0x417feb8745527bef!2s2885%20Barnet%20Hwy%2C%20Coquitlam%2C%20BC%20V3B%201C1!5e0!3m2!1sen!2sca!4v1715144121249!5m2!1sen!2sca"
-                        width="300" height="450" allowFullScreen="" loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade" className="map mx-auto"></iframe>
+                <section className="md:flex mx-auto py-10 w-[100%]">
+                    <div className="mx-2 w-[100%]">
+                        <h1 className="text-2xl py-2 text-center md:text-left">Coquitlam Location</h1>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.918591896756!2d-122.80519882320316!3d49.27793977108967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548678cc852829e7%3A0x417feb8745527bef!2s2885%20Barnet%20Hwy%2C%20Coquitlam%2C%20BC%20V3B%201C1!5e0!3m2!1sen!2sca!4v1715144121249!5m2!1sen!2sca"
+                            width="300" height="450" allowFullScreen="" loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade" className="map mx-auto"></iframe>
+
+                    </div>
+                    <div className="mx-2 py-10 md:py-0 w-[100%]">
+                        <h1 className="text-2xl py-2 text-center md:text-left">West Vancouver Location</h1>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83196.59938726886!2d-123.33264520273437!3d49.33523070000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54866f5e357e6601%3A0xfe3a1182e56f9edb!2sVision%20Coding%20Academy!5e0!3m2!1sen!2sca!4v1715361821515!5m2!1sen!2sca"
+                            width="300" height="450" allowFullScreen="" loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade" className="map mx-auto"></iframe>
+                    </div>
                 </section>
             </div>
         </main>

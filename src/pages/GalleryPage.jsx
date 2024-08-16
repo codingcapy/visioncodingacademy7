@@ -8,13 +8,13 @@ description: Gallery page for Vision Coding Academy
 
 import { useEffect } from 'react';
 import $ from 'jquery';
-import gallery1 from "/gallery1.jpg"
-import gallery2 from "/gallery2.jpg"
-import gallery3 from "/gallery3.jpg"
-import gallery4 from "/gallery4.jpg"
-import gallery5 from "/gallery5.jpg"
-import gallery6 from "/gallery6.jpg"
-import gallery7 from "/gallery7.jpg"
+import gallery1 from "/gallery1.png"
+import gallery2 from "/gallery2.png"
+import gallery3 from "/gallery3.png"
+import gallery4 from "/gallery4.png"
+import gallery5 from "/gallery5.png"
+import gallery6 from "/gallery6.png"
+import gallery7 from "/gallery7.png"
 import gallery8 from "/gallery8.jpeg"
 import gallery9 from "/gallery9.jpeg"
 import gallery10 from "/gallery10.jpeg"

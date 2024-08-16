@@ -7,16 +7,26 @@ description: Contact page for Vision Coding Academy
  */
 
 import $ from 'jquery';
-import ScrollReveal from 'scrollreveal'
-import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { useEffect, useState } from 'react';
 import { LuMapPin } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { TfiEmail } from "react-icons/tfi";
 import { FaWhatsapp } from "react-icons/fa";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import DOMAIN from '../services/endpoint';
+import visionCodingIcon from "/yellow1.png"
 
 export default function ContactPage() {
+
+    const [notification, setNotification] = useState("")
+    const [fNameInput, setFNameInput] = useState("")
+    const [lNameInput, setLNameInput] = useState("")
+    const [contactInput, setContactInput] = useState("")
+    const [contentInput, setContentInput] = useState("")
 
     useEffect(() => {
         document.title = 'Contact | Vision Coding';
@@ -138,6 +148,31 @@ export default function ContactPage() {
         });
     }, []);
 
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const first_name = e.target.firstname.value;
+        const last_name = e.target.lastname.value;
+        const contact = e.target.contact.value;
+        const content = e.target.content.value;
+        const newQuestion = { first_name, last_name, contact, content }
+        try {
+            const res = await axios.post(`${DOMAIN}/api/questions`, newQuestion);
+            if (res?.data.success) {
+                setNotification("Message sent successfully! If you need a response, we will get back to you as soon as possible :)")
+                setFNameInput("")
+                setLNameInput("")
+                setContactInput("")
+                setContentInput("")
+            }
+            else {
+                setNotification("There was an error sending the message :( We will look into this issue, please try again in the near future!")
+            }
+        }
+        catch (err) {
+            setNotification("There was an error sending the message :( We will look into this issue, please try again in the near future!")
+        }
+    }
+
     return (
         <>
             <section className="about overflow-x-hidden">
@@ -186,31 +221,39 @@ export default function ContactPage() {
                         </div>
                     </section>
                     <section className="mx-auto">
-                        <form action="#" className="flex flex-col mx-auto">
-                            <h1 className="text-center text-4xl py-10">Questions?</h1>
+                        <form onSubmit={handleSubmit} className="flex flex-col mx-auto">
+                            <h1 className="text-center text-4xl py-10 text-yellow-200">Questions?</h1>
                             <div className="flex flex-col">
                                 <label htmlFor="title">First Name</label>
-                                <input type="text" name='title' id='title' placeholder="First Name" required
-                                    className="px-2 border rounded-lg border-slate-700 py-1 w-[300px]" />
+                                <input type="text" name='firstname' id='firstname' placeholder="First Name" required
+                                    className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" value={fNameInput} onChange={(e) => setFNameInput(e.target.value)} />
                             </div>
                             <div className="flex flex-col my-2">
-                                <label htmlFor="content">Last Name</label>
-                                <input type="text" name='content' id='content' placeholder='Last Name' required rows="10"
-                                    cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px]" />
+                                <label htmlFor="content">Last Name (optional)</label>
+                                <input type="text" name='lastname' id='lastname' placeholder='Last Name' rows="10"
+                                    cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" value={lNameInput} onChange={(e) => setLNameInput(e.target.value)} />
                             </div>
                             <div className="flex flex-col my-2">
                                 <label htmlFor="content">Contact</label>
-                                <input type="text" name='content' id='content' placeholder='Email or Phone #' required
-                                    rows="10" cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px]" />
+                                <input type="text" name='contact' id='contact' placeholder='Email or Phone #' required
+                                    rows="10" cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" value={contactInput} onChange={(e) => setContactInput(e.target.value)} />
                             </div>
                             <div className="flex flex-col my-2">
                                 <label htmlFor="content">Message</label>
-                                <input type="text" name='content' id='content' placeholder='Message' required rows="10"
-                                    cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px]" />
+                                <textarea type="text" name='content' id='content' placeholder='Message' required rows="10"
+                                    cols="40" value={contentInput} className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" onChange={(e) => setContentInput(e.target.value)} />
                             </div>
-                            <button className="rounded-xl my-5 py-2 px-2 bg-slate-700 text-white mx-auto">Submit</button>
+                            <button className="px-3 py-3 my-7 border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">Submit</button>
                         </form>
                     </section>
+                    <p className='text-center'>{notification}</p>
+                    <div className="mt-20">
+                        <div
+                            className="static bg-gradient-to-r from-black via-yellow-400 to-black h-[2px]">
+                        </div>
+                        <img src={visionCodingIcon} alt=""
+                            className="relative bottom-[45px] md:bottom-[60px] left-[40%] md:left-[48%] w-[75px] md:w-[100px] bg-black" />
+                    </div>
                     <section className="md:flex mx-auto py-10 w-[100%]">
                         <div className="mx-2 w-[100%]">
                             <h1 className="text-2xl py-2">Coquitlam Location</h1>

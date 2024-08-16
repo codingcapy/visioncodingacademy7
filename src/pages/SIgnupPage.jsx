@@ -6,18 +6,48 @@ version: 1.0
 description: Signup page for Vision Coding Academy
  */
 
-import { useEffect } from "react"
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { NavLink, useNavigate } from "react-router-dom";
+import DOMAIN from "../services/endpoint";
+import axios from "axios";
 
 export default function SignupPage() {
 
+    const navigate = useNavigate();
+    const [notification, setNotification] = useState("")
+
     useEffect(() => {
         document.title = 'Signup | Vision Coding';
-      }, []);
+    }, []);
 
-      async function handleSubmit(e){
+    async function handleSubmit(e) {
         e.preventDefault();
-      }
+        try {
+            const email = e.target.email.value;
+            const username = e.target.username.value;
+            const password = e.target.password.value;
+            const confirm = e.target.confirm.value;
+            if (password != confirm){
+                return setNotification("passwords don't match!")
+            }
+            const new_user = {email, username, password}
+            const res = await axios.post(`${DOMAIN}/api/users`, new_user)
+            if (res?.data?.success) {
+                setNotification("success! Redirecting...")
+                setTimeout(() => {
+                    navigate("/login")
+                }, 1000)
+            }
+            else {
+                setTimeout(() => {
+                    setNotification(res?.data?.message)
+                }, 1000)
+            }
+        }
+        catch (err) {
+            setNotification("There was an error signing up :( We will look into this, please try again in the near future!")
+        }
+    }
 
     return (
         <main className="flex-1 mx-auto">
@@ -29,26 +59,26 @@ export default function SignupPage() {
                     <p className="text-center md:text-lg">as a member of <span className="text-yellow-200">Vision Coding
                         Academy</span></p>
                 </section>
-                <section className="py-5 md:pl-20 mx-auto">
+                <section className="py-5 mx-auto">
                     <form onSubmit={handleSubmit} className="flex flex-col mx-auto">
                         <div className="flex flex-col">
-                            <label htmlFor="title">Email</label>
-                            <input type="email" name='title' id='title' placeholder="Email" required
+                            <label htmlFor="email">Email</label>
+                            <input type="email" name='email' id='email' placeholder="Email" required
                                 className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" />
                         </div>
                         <div className="flex flex-col my-2">
-                            <label htmlFor="content">Username</label>
-                            <input type="text" name='content' id='content' placeholder='Username' required rows="10"
+                            <label htmlFor="username">Username</label>
+                            <input type="text" name='username' id='username' placeholder='Username' required rows="10"
                                 cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" />
                         </div>
                         <div className="flex flex-col my-2">
-                            <label htmlFor="content">Password</label>
-                            <input type="password" name='content' id='content' placeholder='Password' required rows="10"
+                            <label htmlFor="password">Password</label>
+                            <input type="password" name='password' id='password' placeholder='Password' required rows="10"
                                 cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" />
                         </div>
                         <div className="flex flex-col my-2">
-                            <label htmlFor="content">Confirm Password</label>
-                            <input type="password" name='content' id='content' placeholder='Confirm Password' required
+                            <label htmlFor="confirm">Confirm Password</label>
+                            <input type="password" name='confirm' id='confirm' placeholder='Confirm Password' required
                                 rows="10" cols="40" className="px-2 border rounded-lg border-slate-700 py-1 w-[300px] text-black" />
                         </div>
                         <button
@@ -59,6 +89,7 @@ export default function SignupPage() {
                         </p>
                     </form>
                 </section>
+                <p className="text-center">{notification}</p>
             </div>
         </main>
     )

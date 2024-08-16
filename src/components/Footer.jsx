@@ -34,12 +34,12 @@ export default function Footer() {
                     <p className="py-2 text-lg md:text-2xl">+1 604-900-3707</p>
                     <p className="py-2 text-lg md:text-2xl">visioncodingca@gmail.com</p>
                 </div>
-                <div className="md:pl-32 py-10 md:py-0 text-center md:text-left">
+                <div className="md:pl-32 py-10 md:py-0 flex flex-col text-center md:text-left">
                     <h3 className="text-2xl md:text-4xl pb-5">Socials</h3>
-                    <p className="py-2 text-lg md:text-2xl">Instagram</p>
-                    <p className="py-2 text-lg md:text-2xl">Facebook</p>
-                    <p className="py-2 text-lg md:text-2xl">Kakaotalk</p>
-                    <p className="py-2 text-lg md:text-2xl">WhatsApp</p>
+                    <NavLink to="https://www.instagram.com/vision.coding/" className="nav-element py-2 text-lg md:text-2xl">Instagram</NavLink>
+                    <NavLink to="https://www.facebook.com/profile.php?id=61556365105748" className="nav-element py-2 text-lg md:text-2xl">Facebook</NavLink>
+                    <NavLink to="http://pf.kakao.com/_LaRxfxj" className="nav-element py-2 text-lg md:text-2xl">Kakaotalk</NavLink>
+                    <NavLink to="http://wa.me/+16049003707" className="nav-element py-2 text-lg md:text-2xl">WhatsApp</NavLink>
                 </div>
             </div>
             <div className="text-center pt-5">

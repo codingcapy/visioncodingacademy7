@@ -31,6 +31,9 @@ import CPage from "./pages/CPage";
 import CPlusPlusPage from "./pages/CPlusPlusPage";
 import APCSPage from "./pages/APCSPage";
 import CCCPage from "./pages/CCCPage";
+import PaymentPage from "./pages/PaymentPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import AccountPage from "./pages/AccountPage";
 
 export function Router() {
     const router = createBrowserRouter(
@@ -58,7 +61,9 @@ export function Router() {
                 <Route path="/courses/interviewprep" element={<InterviewPrepPage />} />
                 <Route path="/courses/advancedcs" element={<AdvancedCsPage />} />
                 <Route path="/courses/devops" element={<DevOpsPage />} />
-                <Route path="/schedule" element={<SchedulePage />} />
+                <Route path="/user" element={<AccountPage />} />
+                <Route path="/payment" element={<PaymentPage />} />
+                <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
             </Route>
         )
     )

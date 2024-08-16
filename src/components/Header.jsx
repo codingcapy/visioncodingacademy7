@@ -9,9 +9,12 @@ description: Header component for Vision Coding Academy
 import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import visionCodingIcon from "/yellow1.png";
+import useAuthStore from '../store/AuthStore';
 
 export default function Header() {
+
     const [navVisible, setNavVisible] = useState(false);
+    const { user, logoutService } = useAuthStore((state) => state);
 
     useEffect(() => {
         function handleResize() {
@@ -55,7 +58,7 @@ export default function Header() {
                     <li
                         className="px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300 text-lg md:text-2xl">
                         <NavLink to="/summer-camp" onClick={() => window.innerWidth < 700 && setNavVisible(false)}>Summer Camp<span
-                                className="text-green-500 px-2 pb-5 text-sm font-bold">NEW!</span></NavLink>
+                            className="text-green-500 px-2 pb-5 text-sm font-bold">NEW!</span></NavLink>
                     </li>
                     <li
                         className="px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300  md:text-2xl">
@@ -73,17 +76,25 @@ export default function Header() {
                         className="px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300  md:text-2xl">
                         <NavLink to="/contact" onClick={() => window.innerWidth < 700 && setNavVisible(false)}>Contact</NavLink>
                     </li>
-                    <li
+                    {!user && <li
                         className="px-5 py-2 text-center md:hidden rounded-md transition ease-in-out duration-300  md:text-2xl">
                         <NavLink to="/login" onClick={() => window.innerWidth < 700 && setNavVisible(false)}>Login</NavLink>
-                    </li>
-                    <li
+                    </li>}
+                    {!user && <li
                         className="px-5 py-2 text-center md:hidden rounded-md transition ease-in-out duration-300  md:text-2xl">
                         <NavLink to="/signup" onClick={() => window.innerWidth < 700 && setNavVisible(false)}>Signup</NavLink>
-                    </li>
+                    </li>}
+                    {user && <li
+                        className="px-5 py-2 text-center md:hidden rounded-md transition ease-in-out duration-300  md:text-2xl">
+                        <NavLink to="/user" onClick={() => window.innerWidth < 700 && setNavVisible(false)}>{user.username}</NavLink>
+                    </li>}
+                    {user && <li onClick={logoutService}
+                        className="px-5 py-2 text-center md:hidden rounded-md transition ease-in-out duration-300  md:text-2xl">
+                        <NavLink to="/signup" onClick={() => window.innerWidth < 700 && setNavVisible(false)}>Logout</NavLink>
+                    </li>}
                 </ul>
             </nav>
-            <div className="flex">
+            {!user && <div className="flex">
                 <NavLink to="/login"
                     className="nav-element hidden px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300 md:text-2xl">
                     Login
@@ -92,7 +103,17 @@ export default function Header() {
                     className="nav-element hidden px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300 md:text-2xl">
                     Signup
                 </NavLink>
-            </div>
+            </div>}
+            {user && <div className="flex">
+                <NavLink to="/user"
+                    className="nav-element hidden px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300 md:text-2xl">
+                    {user?.username}
+                </NavLink>
+                <NavLink to="/" onClick={logoutService}
+                    className="nav-element hidden px-5 py-2 md:py-5 text-center md:block rounded-md transition ease-in-out duration-300 md:text-2xl">
+                    Logout
+                </NavLink>
+            </div>}
         </header>
     );
 }
