@@ -29,6 +29,9 @@ import icon70 from "/icon70cpp.svg"
 import icon71 from "/icon71c.png"
 import icon75 from "/icon75arduino.svg"
 import devops from "/devops.jpg"
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 
 export default function CoursesPage() {
 
@@ -113,6 +116,56 @@ export default function CoursesPage() {
                     <div>
                         <h1 className="pb-10 text-4xl md:text-6xl text-yellow-200 text-center">K-12 Courses</h1>
                         <section className="md:w-[500px] mx-auto">
+                            <div className='mb-10 px-2'>
+                                <Accordion sx={{
+                                    backgroundColor: 'black',
+                                    color: 'white',
+                                    borderRadius: '1rem',
+                                    borderColor: 'rgb(254 240 138)',
+                                    borderWidth: '2px',
+                                    borderStyle: 'solid',
+                                }} className="timeline-content js--fadeInRight rounded-4xl rounded-3xl border-2 border-yellow-200 mb-10">
+                                    <AccordionSummary id="panel-header" aria-controls="panel-content" className="text-2xl font-bold py-2 text-yellow-200">
+                                        <img src={icon7} alt="course1" className="w-[100px] py-6 md:py-0 bg-black text-white" />
+                                        <h2 className="text-2xl font-bold py-10 pl-10 text-yellow-200 text-center">PYTHON BEGINNER</h2>
+                                    </AccordionSummary>
+                                    <AccordionDetails className=''>
+                                        <h3 className="text-2xl font-bold py-2">Programming Language</h3>
+                                        <h4 className="text-xl font-bold py-2">Beginner-friendly and powerful programming
+                                            language used in data science and AI!</h4>
+                                        <NavLink to="/courses/python">
+                                            <div
+                                                className="relative top-10 text-center w-[200px] mx-auto px-3 py-3 bg-black border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">
+                                                Learn More
+                                            </div>
+                                        </NavLink>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </div>
+                            <Accordion sx={{
+                                backgroundColor: 'black',
+                                color: 'white',
+                                borderRadius: '1rem',
+                                borderColor: 'rgb(254 240 138)',
+                                borderWidth: '2px',
+                                borderStyle: 'solid',
+                            }} className="timeline-content js--fadeInRight rounded-4xl rounded-3xl border-2 border-yellow-200 mb-10">
+                                <AccordionSummary id="panel-header" aria-controls="panel-content" className="text-2xl font-bold py-2 text-yellow-200">
+                                    <img src={icon7} alt="course1" className="w-[100px] bg-black text-white" />
+                                    <h2 className="text-2xl font-bold py-10 pl-10 text-yellow-200 text-center">PYTHON INTERMEDIATE</h2>
+                                </AccordionSummary>
+                                <AccordionDetails className=''>
+                                    <h3 className="text-2xl font-bold py-2">Programming Language</h3>
+                                    <h4 className="text-xl font-bold py-2">Challenge your fundamentals of Python skills by
+                                        building exciting projects!</h4>
+                                    <NavLink to="/courses/python">
+                                        <div
+                                            className="relative top-10 text-center w-[200px] mx-auto px-3 py-3 bg-black border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">
+                                            Learn More
+                                        </div>
+                                    </NavLink>
+                                </AccordionDetails>
+                            </Accordion>
                             <div className="timeline-content js--fadeInRight mx-5 md:px-5 md:py-2 rounded-4xl">
                                 <NavLink to="/courses/python">
                                     <div
@@ -306,6 +359,54 @@ export default function CoursesPage() {
                         <h1 className="pb-10 text-4xl md:text-6xl text-yellow-200 text-center" id="computer-science">Adult
                             Courses</h1>
                         <section className="md:w-[500px] mx-auto">
+                            <div className='mb-10'>
+                            <Accordion sx={{
+                                backgroundColor: 'black',
+                                color: 'white',
+                                borderRadius: '1rem',
+                                borderColor: 'rgb(254 240 138)',
+                                borderWidth: '2px',
+                                borderStyle: 'solid',
+                            }} className="timeline-content js--fadeInRight rounded-4xl rounded-3xl border-2 border-yellow-200">
+                                <AccordionSummary id="panel-header" aria-controls="panel-content" className="text-2xl font-bold py-2 text-yellow-200">
+                                    <img src={icon18} alt="course1" className="w-[75px] md:w-[100px] bg-black text-white" />
+                                    <h2 className="text-2xl font-bold py-10 pl-10 text-yellow-200 text-center">TECH INTERVIEW PREP</h2>
+                                </AccordionSummary>
+                                <AccordionDetails className=''>
+                                    <h3 className="text-2xl font-bold py-2">TECH INTERVIEW PREP</h3>
+                                    <h4 className="text-xl font-bold py-2">Interview Preparation and Hands-on Project</h4>
+                                    <NavLink to="/courses/python">
+                                        <div
+                                            className="relative top-10 left-20 text-center md:left-[0px] w-[200px] mx-auto px-3 py-3 bg-black border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">
+                                            Learn More
+                                        </div>
+                                    </NavLink>
+                                </AccordionDetails>
+                            </Accordion>
+                            </div>
+                            <Accordion sx={{
+                                backgroundColor: 'black',
+                                color: 'white',
+                                borderRadius: '1rem',
+                                borderColor: 'rgb(254 240 138)',
+                                borderWidth: '2px',
+                                borderStyle: 'solid',
+                            }} className="timeline-content js--fadeInRight rounded-4xl rounded-3xl border-2 border-yellow-200 mb-10">
+                                <AccordionSummary id="panel-header" aria-controls="panel-content" className="text-2xl font-bold py-2 text-yellow-200">
+                                    <img src={icon44} alt="course1" className="w-[100px] bg-black text-white" />
+                                    <h2 className="text-2xl font-bold py-10 pl-10 text-yellow-200 text-center">ADVANCED CS</h2>
+                                </AccordionSummary>
+                                <AccordionDetails className=''>
+                                    <h3 className="text-2xl font-bold py-2">Beyond Boot Camps</h3>
+                                    <h4 className="text-xl font-bold py-2">Strengthen your knowledge of Computer Architecture, Operating Systems, Data Communication and Algorithm Analysis beyond HTML, CSS, JS, React, and Node</h4>
+                                    <NavLink to="/courses/python">
+                                        <div
+                                            className="relative top-10 left-20 text-center md:left-[0px] w-[200px] mx-auto px-3 py-3 bg-black border-4 rounded border-yellow-300 text-yellow-300 font-bold md:text-2xl hover:bg-yellow-300 hover:text-black transition-all ease duration-500">
+                                            Learn More
+                                        </div>
+                                    </NavLink>
+                                </AccordionDetails>
+                            </Accordion>
                             <div className="timeline-content js--fadeInRight mx-5 md:px-5 md:py-2 rounded-4xl">
                                 <NavLink to="/courses/interviewprep">
                                     <div
